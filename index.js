@@ -15,9 +15,13 @@ app.use(express.json());
 const corsOptions = {
   origin: 'https://c21dosil.com', // Cambia esto a la URL de tu frontend en producción
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 204
 };
 app.use(cors(corsOptions));
+
+// Handling OPTIONS requests
+app.options('*', cors(corsOptions));
 
 // Basic authentication middleware
 const authUsers = { 'admin': 'password123' }; // Cambia esto por usuarios y contraseñas reales
