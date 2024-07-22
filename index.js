@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Middleware to handle CORS
 const corsOptions = {
-  origin: '*', // Cambia esto a la URL de tu frontend en producción
+  origin: 'https://c21dosil.com', // Cambia esto a la URL de tu frontend en producción
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
