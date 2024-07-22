@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Middleware to handle CORS
 const corsOptions = {
-  origin: 'https://c21dosil.com', // Cambia esto a la URL de tu frontend en producción
+  origin: ['https://c21dosil.com', 'https://c21dosil.netlify.app'], // Agrega todos los orígenes permitidos
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 204
