@@ -13,8 +13,9 @@ app.use(express.json());
 
 // Middleware to handle CORS
 const corsOptions = {
-  origin: 'http://localhost:3000', // Cambia esto a la URL de tu frontend en producción
-  optionsSuccessStatus: 200
+  origin: '*', // Cambia esto a la URL de tu frontend en producción
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
 app.use(cors(corsOptions));
 
